@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Shopping Website</title>
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #loader {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url('img/Rolling-1s-200px.png') 50% 50% no-repeat rgb(249, 249, 249);
+            opacity: 1;
+        }
+
+        #pos {
+            margin-left: -42px !important;
+
+        }
+
+        #dept {
+            padding-top: 8% !important;
+        }
+        .border-button {
+              outline: solid 0px #FC5185;
+              transition: outline 0.6s linear;
+              margin: 0.5em; /* Increased margin since the outline expands outside the element */
+            }
+
+            .border-button:hover { outline-width: 5px; }
+    </style>
+     <style>
+        .topnav a {
+          float: left;
+          display: block;
+          color: black;
+          text-align: center;
+          padding: 4px 6px;
+          text-decoration: none;
+          font-size: 17px;
+          border-bottom: 3px solid transparent;
+        }
+
+        .topnav a:hover {
+          border-bottom: 3px solid #9de0f5;
+        }
+
+        .topnav a.active {
+          border-bottom: 3px solid #9de0f5;
+        }
+    </style>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(window).on('load', function() {
+            setTimeout(function() {
+                $('#loader').fadeOut('slow');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="../index.html" style="color: #fff"><strong>COMPANY LOGO</strong></a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 topnav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../index.html" style="color: #fff"><i class="fas fa-home"></i> HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about-us.html" style="color: #fff"><i class="fas fa-exclamation-circle"></i> ABOUT US</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false" style="color: #fff">
+                            <i class="fas fa-shopping-cart"></i> PRODUCT
+                        </a>
+                        <!-- Dropdown menu -->
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="computer.html">Computers</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="printer.html">Printers</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="school-supplies.html">School Supplies</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../services.html" style="color: #fff"><i class="fas fa-tools"></i> SERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact-us.html" style="color: #fff"><i class="fas fa-address-card"></i> CONTACT US</a>
+                    </li>
+                </ul>
+           <ul class="navbar-nav" style="padding-right: 7%">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#"  id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                   <span class="badge badge-pill bg-danger">0</span>&nbsp;
+                  <span><i class="fas fa-shopping-cart"></i></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">No Notification</a></li>
+            </ul>
+          </li>
+        </ul>
+
+            </div>
+        </div>
+    </nav><br><br><Br>
+
+    <div id="loader"></div>
+    <main>
+        <div class="container">
+
+            <!--Navbar-->
+            <nav class="navbar navbar-expand-lg navbar-dark mdb-color lighten-3 mt-3 mb-5">
+
+            </nav>
+            <!--/.Navbar-->
+
+            <!--Section: Products v.3-->
+            <section class="text-center mb-4">
+
+                <!--Grid row-->
+                <div class="row wow fadeIn">
+
+
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card border-button">
+                            <div class="view overlay">
+                                <img src="img/monitor.png" class="card-img-top" alt="" height="190">
+                            </div>
+                            <div class="card-body text-center">
+                                <a href="#" class="grey-text" style="cursor: default;">
+                                    <h5>Monitor</h5>
+                                </a>
+                                <h4 class="font-weight-bold blue-text">
+                                    <strong>Php 6,700</strong>
+                                </h4>
+                                <h4 class="font-weight-bold blue-text">
+                                    <a href="view-product.html"><button type="button" class="btn btn-outline-info btn-rounded" data-mdb-ripple-color="dark">VIew Details</button></a>
+                                </h4>
+                            </div>
+                        </div>
+                        <!--Card-->
+
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card border-button">
+                            <div class="view overlay">
+                                <img src="img/1233096975_501848.jpg" class="card-img-top" alt="" height="190">
+                            </div>
+                            <div class="card-body text-center">
+                                <a href="#" class="grey-text" style="cursor: default;">
+                                    <h5>CPU</h5>
+                                </a>
+                                <h4 class="font-weight-bold blue-text">
+                                    <strong>Php 6,000</strong>
+                                </h4>
+                                <h4 class="font-weight-bold blue-text">
+                                    <a href="view-product2.html"><button type="button" class="btn btn-outline-info btn-rounded" data-mdb-ripple-color="dark">VIew Details</button></a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card border-button">
+                            <div class="view overlay">
+                                <img src="img/21-219244_hard-disc-png-image-computer-accessories-hard-disk.png" class="card-img-top" alt="" height="190">
+                            </div>
+                            <div class="card-body text-center">
+                                <a href="#" class="grey-text" style="cursor: default;">
+                                    <h5>Hard Disk</h5>
+                                </a>
+                                <h4 class="font-weight-bold blue-text">
+                                    <strong>Php 7,500</strong>
+                                </h4>
+                                <h4 class="font-weight-bold blue-text">
+                                    <a href="view-product3.html"><button type="button" class="btn btn-outline-info btn-rounded" data-mdb-ripple-color="dark">VIew Details</button></a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Fourth column-->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card border-button">
+                            <div class="view overlay">
+                                <img src="img/mouse.png" class="card-img-top" alt="" height="190">
+                            </div>
+                            <div class="card-body text-center">
+                                <a href="#" class="grey-text" style="cursor: default;">
+                                    <h5>Mouse</h5>
+                                </a>
+                                <h4 class="font-weight-bold blue-text">
+                                    <strong>Php 250</strong>
+                                </h4>
+                                <h4 class="font-weight-bold blue-text">
+                                    <a href="view-product4.html"><button type="button" class="btn btn-outline-info btn-rounded" data-mdb-ripple-color="dark">VIew Details</button></a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Grid row-->
+
+                    <!--Grid row-->
+                    <div class="row wow fadeIn">
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="card border-button">
+                                <div class="view overlay">
+                                    <img src="img/keyboard.png" class="card-img-top" alt="" height="190">
+                                </div>
+                                <div class="card-body text-center">
+                                    <a href="#" class="grey-text" style="cursor: default;">
+                                        <h5>Keyboard</h5>
+                                    </a>
+                                    <h4 class="font-weight-bold blue-text">
+                                        <strong>Php 350</strong>
+                                    </h4>
+                                    <h4 class="font-weight-bold blue-text">
+                                        <a href="view-product5.html"><button type="button" class="btn btn-outline-info btn-rounded" data-mdb-ripple-color="dark">VIew Details</button></a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="card border-button">
+                                <div class="view overlay">
+                                    <img src="img/speaker.png" class="card-img-top" alt="" height="190">
+                                </div>
+                                <div class="card-body text-center">
+                                    <a href="#" class="grey-text" style="cursor: default;">
+                                        <h5>Speaker</h5>
+                                    </a>
+                                    <h4 class="font-weight-bold blue-text">
+                                        <strong>Php 480</strong>
+                                    </h4>
+                                    <h4 class="font-weight-bold blue-text">
+                                        <a href="view-product6.html"><button type="button" class="btn btn-outline-info btn-rounded" data-mdb-ripple-color="dark">VIew Details</button></a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="card border-button">
+                                <div class="view overlay">
+                                    <img src="img/externalhardisk.jpg" class="card-img-top" alt="" height="190">
+                                </div>
+                                <div class="card-body text-center">
+                                    <a href="#" class="grey-text" style="cursor: default;">
+                                        <h5>External Hard disk</h5>
+                                    </a>
+                                    <h4 class="font-weight-bold blue-text">
+                                        <strong>Php 1,500</strong>
+                                    </h4>
+                                    <h4 class="font-weight-bold blue-text">
+                                        <a href="view-product7.html"><button type="button" class="btn btn-outline-info btn-rounded" data-mdb-ripple-color="dark">VIew Details</button></a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Fourth column-->
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="card border-button">
+                                <div class="view overlay">
+                                    <img src="img/usb.png" class="card-img-top" alt="" height="190">
+                                </div>
+                                <div class="card-body text-center">
+                                    <a href="#" class="grey-text" style="cursor: default;">
+                                        <h5>USB flash drive</h5>
+                                    </a>
+                                    <h4 class="font-weight-bold blue-text">
+                                        <strong>Php 500</strong>
+                                    </h4>
+                                    <h4 class="font-weight-bold blue-text">
+                                        <a href="view-product8.html"><button type="button" class="btn btn-outline-info btn-rounded" data-mdb-ripple-color="dark">VIew Details</button></a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <!--Section: Products v.3-->
+
+            <!--Pagination-->
+            <nav class="d-flex justify-content-center wow fadeIn">
+                <ul class="pagination pg-blue">
+
+                    <!--Arrow left-->
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </li>
+
+                    <li class="page-item active">
+                        <a class="page-link" href="#">1
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">4</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">5</a>
+                    </li>
+
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!--Pagination-->
+
+        </div>
+    </main>
+
+
+
+    <footer class="bg-primary text-white text-center text-lg-start">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Footer Content</h5>
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                        molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
+                        voluptatem veniam, est atque cumque eum delectus sint!
+                    </p>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#!" class="text-white">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Link 4</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-0">Links</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!" class="text-white">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Link 4</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2020 Copyright:
+            <a class="text-white" href="#">Sample Website</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+</body>
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<script type="text/javascript">
+    $('.navbar>li>a').on('click', function() {
+        $('.navbar-collapse').collapse('hide');
+    });
+    new WOW().init();
+</script>
+
+</html>
